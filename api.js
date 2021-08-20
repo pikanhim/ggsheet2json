@@ -75,9 +75,9 @@ module.exports = function (req, res, next) {
 
                         for(var j = 0; j < headerObj.length; j++){
                             if(isNaN(v[j]))
-                                newRow[headerObj[j]] = v[j];
+                                newRow[headerObj[j].toLowerCase()] = v[j];
                             else
-                                newRow[headerObj[j]] = Number(v[j]);
+                                newRow[headerObj[j].toLowerCase()] = Number(v[j]);
                         }
 
                         rows.push(newRow);
